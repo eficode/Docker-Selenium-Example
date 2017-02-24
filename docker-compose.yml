@@ -1,0 +1,67 @@
+version: '3'
+
+services:
+  demoapp:
+    image: suonto/demoapp
+    expose:
+      - 7272
+    networks:
+      - selenium-grid
+
+  hub:
+    image: selenium/hub:3.0.1-germanium
+    expose:
+      - 4444
+    networks:
+      - selenium-grid
+
+  chrome:
+    image: selenium/node-chrome-debug:3.0.1-germanium
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    ports:
+      - 5900:5900
+    depends_on:
+      - hub
+    networks:
+      - selenium-grid
+
+  firefox:
+    image: selenium/node-firefox-debug:3.0.1-germanium
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    ports:
+      - 5901:5900
+    depends_on:
+      - hub
+    networks:
+      - selenium-grid
+
+  test-gc:
+    build: robot
+    command: -v BROWSER:gc --outputdir /out /tests
+    volumes:
+      - ./robot/tests:/tests:ro
+      - ./results/gc:/out:rw
+    depends_on:
+      - demoapp
+      - firefox
+    networks:
+      - selenium-grid
+
+  test-ff:
+    build: robot
+    command: -v BROWSER:ff --outputdir /out /tests
+    volumes:
+      - ./robot/tests:/tests:ro
+      - ./results/ff:/out:rw
+    depends_on:
+      - demoapp
+      - chrome
+    networks:
+      - selenium-grid
+
+networks:
+  selenium-grid:
