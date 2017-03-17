@@ -2,7 +2,7 @@ version: '3'
 
 services:
   demoapp:
-    image: suonto/demoapp
+    build: demoapp
     expose:
       - 7272
     networks:
