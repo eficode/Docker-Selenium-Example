@@ -7,6 +7,8 @@
     function login(username, password) {
         if (username == "demo" && password == "mode") {
             window.location = "welcome.html";
+        } else if (username == "demo" && password == "") {
+            window.location = "welcome.html";
         } else {
             window.location = "error.html";
         }
