@@ -47,7 +47,7 @@ services:
       - ./results/gc:/out:rw
     depends_on:
       - demoapp
-      - firefox
+      - chrome
     networks:
       - selenium-grid
 
