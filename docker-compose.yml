@@ -59,7 +59,7 @@ services:
       - ./results/ff:/out:rw
     depends_on:
       - demoapp
-      - chrome
+      - firefox
     networks:
       - selenium-grid
 
