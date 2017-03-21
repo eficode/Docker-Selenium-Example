@@ -56,7 +56,8 @@ docker-compose up -d hub firefox chrome
 
 **Robot Framework Tests with browsers:**
 ```
-docker-compose up test-ff test-gc
+docker-compose run test-ff
+docker-compose run test-gc
 ```
 
 **Reports:**  
