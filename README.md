@@ -69,5 +69,5 @@ Connect with vnc to the browsers (in 5900 and 5901)
 ## Cleanup
 ```
 docker-compose down
-docker-machine destroy -f test-machine
+docker-machine rm -f test-machine
 ```
