@@ -64,7 +64,7 @@ docker-compose run test-gc
 After test run,test output files will appear in [results](results) directory.
 
 **View & Debug Execution:**  
-Connect with vnc to the browsers (in 5900 and 5901)
+Connect with vnc to the browsers (in 5900 and 5901). When prompted for password the default is `secret`.
 
 ## Cleanup
 ```
