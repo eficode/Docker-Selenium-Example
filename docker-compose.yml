@@ -26,6 +26,8 @@ services:
       - hub
     networks:
       - selenium-grid
+    volumes:
+      - /dev/shm:/dev/shm
 
   firefox:
     image: selenium/node-firefox-debug:3.0.1-germanium
