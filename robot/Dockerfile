@@ -5,4 +5,4 @@ RUN  pip install -r /tmp/requirements.txt
 
 COPY tests /tests
 
-ENTRYPOINT [ "pybot" ]
+ENTRYPOINT [ "robot" ]
