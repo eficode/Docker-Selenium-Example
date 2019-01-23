@@ -9,14 +9,14 @@ services:
       - selenium-grid
 
   hub:
-    image: selenium/hub:3.14.0
+    image: selenium/hub:latest
     expose:
       - 4444
     networks:
       - selenium-grid
 
   chrome:
-    image: selenium/node-chrome-debug:3.14.0
+    image: selenium/node-chrome-debug:latest
     environment:
       - HUB_PORT_4444_TCP_ADDR=hub
       - HUB_PORT_4444_TCP_PORT=4444
@@ -28,7 +28,7 @@ services:
       - selenium-grid
 
   firefox:
-    image: selenium/node-firefox-debug:3.14.0
+    image: selenium/node-firefox-debug:latest
     environment:
       - HUB_PORT_4444_TCP_ADDR=hub
       - HUB_PORT_4444_TCP_PORT=4444
