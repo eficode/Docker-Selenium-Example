@@ -1,7 +1,8 @@
-FROM  python:alpine3.7
+FROM python:alpine
 
 COPY requirements.txt /tmp/requirements.txt
-RUN  pip install -r /tmp/requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r /tmp/requirements.txt
 
 COPY tests /tests
 
