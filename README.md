@@ -7,31 +7,31 @@ It's great to use [docker-compose](https://docs.docker.com/compose/) to build we
 **Versions:**
 ```
 (docker-selenium-rf) docker-selenium-rf % docker-machine version
-docker-machine version 0.15.0, build b48dc28d
+docker-machine version 0.16.1, build cce350d
 
 (docker-selenium-rf) docker-selenium-rf % docker-compose version
-docker-compose version 1.22.0, build unknown
-docker-py version: 3.5.0
-CPython version: 3.7.0
-OpenSSL version: OpenSSL 1.0.2p  14 Aug 2018
+docker-compose version 1.23.2, build unknown
+docker-py version: 3.6.0
+CPython version: 3.7.2
+OpenSSL version: OpenSSL 1.0.2q  20 Nov 2018
 
 (docker-selenium-rf) docker-selenium-rf % docker version
-Client:
- Version:           18.06.1-ce
- API version:       1.38
- Go version:        go1.10.3
- Git commit:        e68fc7a
- Built:             Tue Aug 21 17:21:31 2018
+Client: Docker Engine - Community
+ Version:           18.09.1
+ API version:       1.39
+ Go version:        go1.11.4
+ Git commit:        4c52b90
+ Built:             Thu Jan 10 03:21:29 2019
  OS/Arch:           darwin/amd64
  Experimental:      false
 
-Server:
+Server: Docker Engine - Community
  Engine:
-  Version:          18.06.1-ce
-  API version:      1.38 (minimum version 1.12)
-  Go version:       go1.10.3
-  Git commit:       e68fc7a
-  Built:            Tue Aug 21 17:29:02 2018
+  Version:          18.09.1
+  API version:      1.39 (minimum version 1.12)
+  Go version:       go1.10.6
+  Git commit:       4c52b90
+  Built:            Wed Jan  9 19:41:49 2019
   OS/Arch:          linux/amd64
   Experimental:     true
 ```
